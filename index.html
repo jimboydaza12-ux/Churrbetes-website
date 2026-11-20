@@ -18,6 +18,15 @@
     <nav aria-label="Main navigation">
       <a href="#flavors">Our flavors</a>
       <a href="#story">Our story</a>
+      <a class="cart-link" href="checkout.html" data-cart-link aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+          <circle cx="10" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+        <span class="cart-link-label">Cart</span>
+        <span class="cart-count" data-cart-count aria-live="polite">0</span>
+      </a>
       <a class="nav-cta" href="#visit">Find us</a>
     </nav>
   </header>
@@ -66,23 +75,69 @@
             <img class="flavor-photo" src="churrbetes-ube.png" alt="">
             <span class="photo-hint" aria-hidden="true">View full photo</span>
           </button>
-          <div class="flavor-info"><span class="flavor-number">01 / THE CROWD-PLEASER</span><h3>Ube</h3><p>Churro bites topped with a scoop of ube ice cream.</p></div>
+          <div class="flavor-info">
+            <span class="flavor-number">01 / THE CROWD-PLEASER</span>
+            <h3>Ube</h3>
+            <button class="flavor-add-button" type="button" data-add-to-cart="ube" aria-label="Add Ube churro bites to cart for 99 pesos">
+              <span class="flavor-description">Churro bites topped with a scoop of ube ice cream.</span>
+              <span class="flavor-purchase-row">
+                <span class="flavor-price">₱99</span>
+                <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                  <circle cx="10" cy="20" r="1"></circle>
+                  <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+                <span>Add to cart</span>
+              </span>
+            </button>
+          </div>
         </article>
         <article class="flavor-card flavor-cheese">
           <button class="flavor-art flavor-photo-button" type="button" data-full-image="churrbetes-cheese.png" data-flavor="Cheese" aria-label="View the full-size Cheese flavor photo">
             <img class="flavor-photo" src="churrbetes-cheese.png" alt="">
             <span class="photo-hint" aria-hidden="true">View full photo</span>
           </button>
-          <div class="flavor-info"><span class="flavor-number">02 / THE GOLDEN ONE</span><h3>Cheese</h3><p>Churro bites topped with a scoop of cheese ice cream.</p></div>
+          <div class="flavor-info">
+            <span class="flavor-number">02 / THE GOLDEN ONE</span>
+            <h3>Cheese</h3>
+            <button class="flavor-add-button" type="button" data-add-to-cart="cheese" aria-label="Add Cheese churro bites to cart for 99 pesos">
+              <span class="flavor-description">Churro bites topped with a scoop of cheese ice cream.</span>
+              <span class="flavor-purchase-row">
+                <span class="flavor-price">₱99</span>
+                <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                  <circle cx="10" cy="20" r="1"></circle>
+                  <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+                <span>Add to cart</span>
+              </span>
+            </button>
+          </div>
         </article>
         <article class="flavor-card flavor-vanilla">
           <button class="flavor-art flavor-photo-button" type="button" data-full-image="churrbetes-product.png" data-flavor="Vanilla" aria-label="View the full-size Vanilla flavor photo">
             <img class="flavor-photo" src="churrbetes-product.png" alt="">
             <span class="photo-hint" aria-hidden="true">View full photo</span>
           </button>
-          <div class="flavor-info"><span class="flavor-number">03 / THE CLASSIC</span><h3>Vanilla</h3><p>Churro bites topped with a scoop of vanilla ice cream.</p></div>
+          <div class="flavor-info">
+            <span class="flavor-number">03 / THE CLASSIC</span>
+            <h3>Vanilla</h3>
+            <button class="flavor-add-button" type="button" data-add-to-cart="vanilla" aria-label="Add Vanilla churro bites to cart for 99 pesos">
+              <span class="flavor-description">Churro bites topped with a scoop of vanilla ice cream.</span>
+              <span class="flavor-purchase-row">
+                <span class="flavor-price">₱99</span>
+                <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                  <circle cx="10" cy="20" r="1"></circle>
+                  <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+                <span>Add to cart</span>
+              </span>
+            </button>
+          </div>
         </article>
       </div>
+      <p class="cart-feedback" data-cart-message role="status" aria-live="polite" hidden></p>
       <p class="serving-note"><span aria-hidden="true">✦</span> Every cup is made for easy snacking and sharing.</p>
     </section>
 
@@ -153,5 +208,6 @@
       }
     });
   </script>
+  <script src="cart.js"></script>
 </body>
 </html>

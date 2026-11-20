@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a72d2d">
+  <title>Your cart | Churrbetes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-stripe" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Churrbetes home">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span>Churrbetes</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#flavors">Our flavors</a>
+      <a href="index.html#story">Our story</a>
+      <a class="cart-link" href="checkout.html" data-cart-link aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+          <circle cx="10" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+        <span class="cart-link-label">Cart</span>
+        <span class="cart-count" data-cart-count aria-live="polite">0</span>
+      </a>
+      <a class="nav-cta" href="index.html#visit">Find us</a>
+    </nav>
+  </header>
+
+  <main class="checkout-main">
+    <a class="checkout-back" href="index.html#flavors">← Continue shopping</a>
+    <div class="checkout-heading">
+      <p class="eyebrow">One happy cup at a time</p>
+      <h1>Your cart</h1>
+      <p>Adjust quantities or add another flavor before you place your order.</p>
+    </div>
+
+    <div class="checkout-layout">
+      <section class="checkout-items" aria-label="Items in your cart">
+        <div class="checkout-item-list" data-cart-items></div>
+        <div class="cart-empty" data-cart-empty hidden>
+          <h2>Your cart is empty</h2>
+          <p>Choose Ube, Cheese, or Vanilla to get started.</p>
+          <a class="button button-primary" href="index.html#flavors">Browse flavors</a>
+        </div>
+      </section>
+
+      <aside class="checkout-summary">
+        <h2>Order summary</h2>
+        <div class="cart-summary-lines" data-cart-summary></div>
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong data-cart-total>₱0</strong>
+        </div>
+        <p class="checkout-note">
+          This GitHub Pages demo does not process online payments. Placing an order opens an email draft to Churrbetes for confirmation.
+        </p>
+        <form class="checkout-form" data-checkout-form>
+          <label>
+            Your name
+            <input name="customerName" autocomplete="name" required>
+          </label>
+          <label>
+            Phone number
+            <input name="phone" type="tel" autocomplete="tel" required>
+          </label>
+          <label>
+            Email <span class="optional-label">(optional)</span>
+            <input name="email" type="email" autocomplete="email">
+          </label>
+          <label>
+            Order notes <span class="optional-label">(optional)</span>
+            <textarea name="notes" rows="3"></textarea>
+          </label>
+          <button class="button button-primary checkout-submit" type="submit">Place order via email</button>
+        </form>
+        <p class="cart-message" data-cart-message role="status" aria-live="polite" hidden></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html#home"><span class="brand-mark" aria-hidden="true">C</span><span>Churrbetes</span></a>
+    <p>A little circus of sweetness.</p>
+    <span class="footer-star" aria-hidden="true">✦</span>
+  </footer>
+  <script src="cart.js"></script>
+</body>
+</html>
